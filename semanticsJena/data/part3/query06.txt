@@ -1,0 +1,17 @@
+# Fix for query6.txt - Grandmother
+PREFIX ns: <http://www.owl-ontologies.com/unnamed.owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?name
+WHERE {
+    # A grandmother is female
+    ?grandmother rdf:type ns:Female .
+    
+    # Has a child
+    ?child ns:isDaughterOf|ns:isSonOf ?grandmother .
+    
+    # The child has a child (grandchild)
+    ?grandchild ns:isDaughterOf|ns:isSonOf ?child .
+    
+    ?grandmother ns:name ?name .
+}

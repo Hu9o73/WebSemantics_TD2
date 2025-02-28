@@ -1,0 +1,13 @@
+# query12.txt - List French citizens with marriage info
+PREFIX ns: <http://www.owl-ontologies.com/unnamed.owl#>
+
+SELECT ?name ?age ?spouse_name
+WHERE {
+    ?person ns:nationality "French".
+    ?person ns:name ?name.
+    ?person ns:age ?age.
+    OPTIONAL {
+        ?person ns:isMarriedWith ?spouse.
+        ?spouse ns:name ?spouse_name.
+    }
+}

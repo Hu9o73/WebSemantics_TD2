@@ -1,0 +1,8 @@
+# query16.txt - List persons who are married
+PREFIX ns: <http://www.owl-ontologies.com/unnamed.owl#>
+
+SELECT DISTINCT ?name
+WHERE {
+    ?person ns:isMarriedWith ?spouse.
+    ?person ns:name ?name.
+}

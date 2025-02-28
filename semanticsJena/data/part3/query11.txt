@@ -1,0 +1,10 @@
+# query11.txt - List of persons whose father is more than 40 years old
+PREFIX ns: <http://www.owl-ontologies.com/unnamed.owl#>
+
+SELECT ?child_name
+WHERE {
+    ?child ns:isSonOf ?father.
+    ?father ns:age ?father_age.
+    ?child ns:name ?child_name.
+    FILTER (?father_age > 40)
+}

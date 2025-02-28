@@ -1,0 +1,10 @@
+# query10.txt - List (name, age) of children of Peter
+PREFIX ns: <http://www.owl-ontologies.com/unnamed.owl#>
+
+SELECT ?name ?age
+WHERE {
+    {?child ns:isDaughterOf ?peter} UNION {?child ns:isSonOf ?peter}.
+    ?peter ns:name "Peter".
+    ?child ns:name ?name.
+    ?child ns:age ?age.
+}

@@ -1,0 +1,9 @@
+# query2.txt - List instances of Daughter
+PREFIX ns: <http://www.owl-ontologies.com/unnamed.owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?name
+WHERE {
+    ?person rdf:type ns:Daughter.
+    ?person ns:name ?name.
+}

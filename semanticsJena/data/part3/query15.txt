@@ -1,0 +1,21 @@
+# Fix for query15.txt - Uncles
+PREFIX ns: <http://www.owl-ontologies.com/unnamed.owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?name
+WHERE {
+    # An uncle is male
+    ?uncle rdf:type ns:Male .
+    
+    # Has a sibling who is a parent
+    ?uncle ns:isSonOf ?grandparent .
+    ?parent ns:isDaughterOf|ns:isSonOf ?grandparent .
+    
+    # The parent has a child
+    ?child ns:isDaughterOf|ns:isSonOf ?parent .
+    
+    # Uncle and parent must be different
+    FILTER(?uncle != ?parent)
+    
+    ?uncle ns:name ?name .
+}

@@ -1,0 +1,8 @@
+# query14.txt - List persons who are daughter of someone
+PREFIX ns: <http://www.owl-ontologies.com/unnamed.owl#>
+
+SELECT DISTINCT ?name
+WHERE {
+    ?person ns:isDaughterOf ?parent.
+    ?person ns:name ?name.
+}

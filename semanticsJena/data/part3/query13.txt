@@ -1,0 +1,16 @@
+# Fix for query13.txt - Brothers
+PREFIX ns: <http://www.owl-ontologies.com/unnamed.owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?name
+WHERE {
+    # Find males who share a parent with another person
+    ?brother rdf:type ns:Male .
+    ?brother ns:isSonOf ?parent .
+    ?sibling ns:isDaughterOf|ns:isSonOf ?parent .
+    
+    # Must be different persons
+    FILTER(?brother != ?sibling)
+    
+    ?brother ns:name ?name .
+}
