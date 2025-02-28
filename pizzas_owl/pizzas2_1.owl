@@ -1,0 +1,762 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#"
+     xml:base="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#">
+    <owl:Ontology rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl">
+        <owl:imports rdf:resource="http://protege.stanford.edu/plugins/owl/protege"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#hasBase -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#hasBase"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#hasTopping -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#hasTopping"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#AmericanPizza -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#AmericanPizza">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MozzarellaTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PeperoniSausageTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MargheritaPizza"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MushroomPizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#AnchoviesTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#AnchoviesTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#FishTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MixedSeafoodTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PrawnsTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#ArtichokeTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#ArtichokeTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetableTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#AsparagusTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#CaperTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#GarlicTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#LeekTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MushroomTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#OliveTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#OnionTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PepperTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PetitPoisTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#RocketTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SpinachTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#TomatoTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#AsparagusTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#AsparagusTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetableTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#CaperTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#GarlicTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#LeekTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MushroomTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#OliveTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#OnionTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PepperTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PetitPoisTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#RocketTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SpinachTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#TomatoTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#CajunSpiceTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#CajunSpiceTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#HerbSpiceTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#RosemaryTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#CaperTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#CaperTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetableTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#GarlicTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#LeekTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MushroomTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#OliveTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#OnionTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PepperTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PetitPoisTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#RocketTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SpinachTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#TomatoTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#CheeseTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#CheeseTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#DairyTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#EggTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#ChickenTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#ChickenTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MeatTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#HamTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#HotSpicedBeefTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PeperoniSausageTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#DairyTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#DairyTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PizzaTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#FishTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#FruitTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#HerbSpiceTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MeatTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#NutTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SauceTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#DeepPan -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#DeepPan">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PizzaBase"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#ThinAndCrispy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#DomainConcept -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#DomainConcept"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#EggTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#EggTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#DairyTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#FishTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#FishTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PizzaTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#FruitTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#HerbSpiceTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MeatTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#NutTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SauceTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#FourCheesesTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#FourCheesesTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#CheeseTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#GoatsCheeseTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#GorgonzolaTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MozzarellaTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#ParmesanTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#FruitTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#FruitTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PizzaTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#HerbSpiceTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MeatTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#NutTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SauceTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#GarlicTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#GarlicTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetableTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#LeekTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MushroomTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#OliveTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#OnionTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PepperTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PetitPoisTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#RocketTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SpinachTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#TomatoTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#GoatsCheeseTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#GoatsCheeseTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#CheeseTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#GorgonzolaTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MozzarellaTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#ParmesanTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#GorgonzolaTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#GorgonzolaTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#CheeseTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MozzarellaTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#ParmesanTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#GreenPepperTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#GreenPepperTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PepperTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#JalapenoPepperTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PeperonataTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SweetPepperTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#HamTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#HamTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MeatTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#HotSpicedBeefTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PeperoniSausageTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#HerbSpiceTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#HerbSpiceTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PizzaTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MeatTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#NutTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SauceTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#HotGreenPepperTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#HotGreenPepperTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#GreenPepperTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#HotSpicedBeefTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#HotSpicedBeefTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MeatTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PeperoniSausageTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#JalapenoPepperTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#JalapenoPepperTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PepperTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PeperonataTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SweetPepperTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#LeekTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#LeekTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetableTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MushroomTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#OliveTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#OnionTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PepperTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PetitPoisTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#RocketTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SpinachTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#TomatoTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MargheritaPizza -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MargheritaPizza">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#NamedPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetarianPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MozzarellaTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MushroomPizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MeatTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MeatTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PizzaTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#NutTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SauceTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MeatyPizza -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MeatyPizza">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#Pizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MeatTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MixedSeafoodTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MixedSeafoodTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#FishTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PrawnsTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MozzarellaTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MozzarellaTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#CheeseTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#ParmesanTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MushroomPizza -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MushroomPizza">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MozzarellaTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MushroomTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MushroomTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MushroomTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetableTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#OliveTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#OnionTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PepperTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PetitPoisTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#RocketTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SpinachTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#TomatoTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#NamedPizza -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#NamedPizza">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#Pizza"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#RealItalianPizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#NutTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#NutTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PizzaTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SauceTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#OliveTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#OliveTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetableTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#OnionTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PepperTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PetitPoisTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#RocketTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SpinachTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#TomatoTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#OnionTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#OnionTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetableTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PepperTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PetitPoisTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#RocketTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SpinachTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#TomatoTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#ParmaHamTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#ParmaHamTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#HamTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#ParmesanTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#ParmesanTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#CheeseTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PeperonataTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PeperonataTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PepperTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SweetPepperTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PeperoniSausageTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PeperoniSausageTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#MeatTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PepperTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PepperTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetableTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PetitPoisTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#RocketTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SpinachTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#TomatoTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PetitPoisTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PetitPoisTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetableTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#RocketTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SpinachTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#TomatoTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PineKernels -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PineKernels">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#NutTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#Pizza -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#Pizza">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#DomainConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#hasBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PizzaBase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PizzaTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PizzaBase"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PizzaBase -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PizzaBase">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#DomainConcept"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PizzaTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PizzaTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#DomainConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PrawnsTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PrawnsTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#FishTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#RealItalianPizza -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#RealItalianPizza">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#Pizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#hasBase"/>
+                <owl:allValuesFrom rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#ThinAndCrispy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#RedOnionTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#RedOnionTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#OnionTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#RocketTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#RocketTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetableTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SpinachTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#TomatoTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#RosemaryTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#RosemaryTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#HerbSpiceTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SauceTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SauceTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PizzaTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SlicedTomatoTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SlicedTomatoTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#TomatoTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SundriedTomatoTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SpinachTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SpinachTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetableTopping"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#TomatoTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SultanaTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SultanaTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#FruitTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SundriedTomatoTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SundriedTomatoTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#TomatoTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SweetPepperTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SweetPepperTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PepperTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#ThinAndCrispy -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#ThinAndCrispy">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PizzaBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#TobascoPepperSauce -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#TobascoPepperSauce">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#SauceTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#TomatoTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#TomatoTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetableTopping -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetableTopping">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetarianPizza -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#VegetarianPizza">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#Pizza"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
